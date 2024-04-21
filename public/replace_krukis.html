@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/hard.css" type="text/css" />
+    <title>OctoBotv2 Update Cookies</title>
+      <button><a style="color:black;font-size:10px" href="index.html">↩️Back</a></button>
+</head>
+<body>
+<h2>🐙OCTOBOTV2 </h2>
+<fieldset>
+    <h3>🐙Update OctoBotv2 Cookies</h3>
+    <form id="contentForm">
+        <textarea id="newContent" rows="20" cols="50"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p style="color:red">Dev: Rejard</p>
+    <details><summary>EP</summary>
+    ENDPOINT: <mark>/krukis.txt </mark>
+    </details>
+</fieldset>
+<br>
+<fieldset>
+<legend>Guide:How to Update </legend>
+<ul>
+<li><b>1.</b> Download Kiwi Browser </li>
+<li><b>2.</b> Download c3c fbstate </li>
+<li><b>3.</b> Import c3c plugin</li>
+<li><b>4.</b> Login Your Facebook Dummy</li> 
+<li><b>5.</b> Click copy to clipboard </li>
+<li><b>6.</b> Paste Here then sit and enjoy</li>
+</ul>
+</fieldset >
+    <script>
+       window.onload = alert("Use to Update OCTOBOTV2 Cookie\n\nDev:Rejard"); document.getElementById('contentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const newContent = document.getElementById('newContent').value;
+
+            fetch('/updateKrukisTxt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ newContent: newContent })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('There was a problem with your fetch operation:', error);
+               alert(`${error}`);
+            });
+        });
+    </script>
+</body>
+</html>

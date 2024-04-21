@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐙OctoBotv2 Build4</title>
+    <link rel="stylesheet" href="res/hard.css" type="text/css" />
+    <style>
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid red;
+        border-radius: 10px;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: modalopen;
+        animation-duration: 0.4s;
+      }
+
+      /* Modal close button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Animation for modal opening */
+      @keyframes modalopen {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      body {
+        font-family: Arial, sans-serif; /* Example font family */
+        color: black;
+      }
+        #video-container {
+      max-width: 100%;
+      margin: 20px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+     
+       a {
+       text-decoration: none;
+       color: orange;
+       font-size: 15px
+       }
+    </style>
+    <script>
+      // Generate a random nonce
+      function generateNonce(length) {
+        let result = "";
+        const characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        const charactersLength = characters.length;
+        for (let i = 0; i < length; i++) {
+          result += characters.charAt(
+            Math.floor(Math.random() * charactersLength)
+          );
+        }
+        return result;
+      }
+
+      // Set the nonce for the script
+      const scriptElement = document.createElement("script");
+      scriptElement.setAttribute(
+        "src",
+        "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"
+      );
+      scriptElement.setAttribute("nonce", generateNonce(16)); // Set the nonce attribute
+
+      // Append the script element to the document
+      document.head.appendChild(scriptElement);
+    </script>
+  </head>
+  <body>
+   <!-- Modal HTML -->
+<div id="passwordModal" class="modal" style="overflow: auto">
+ <h1>🐙 OctoBotv2</h1>
+  <details>
+  <summary>About:
+  </summary>
+<p>OctoBot is a bot modules created and maintained by <a href="https://www.facebook.com/rejardbentazarofficial">Rejard Bentazar</a> aims is to practice my coding skills and para maging pogi sa mata ng chicks at maka dali ng mga wait kakanta ako <i>🎶Mga Silly Hoes na mabisa, Mga Aso Labas Dila, Tumitira ket walang tisa, Alam mong masarap kase mali na🎶</i> Basta PaFollow naman po tsaka join nadin sa gc ko <a href="https://m.me/j/Abbl63EsX-6_NN7W/">ChatWithAiOfficial</a> Maraming Salamat🖤</p>
+
+        </details> 
+        <br>
+        <details><summary>ACCESS DASHBOARD:</summary>
+        <fieldset>
+  <legend>🐙Access Admin Dashboard</legend>
+  <input type="password" id="passwordInput">
+  <button onclick="checkPassword()">Submit</button>
+ </fieldset>
+ </div>
+    <div style="text-align: center" onclick="openModal('modal3')">
+      <img
+        src="https://cdn.glitch.global/f95f5846-a754-4727-852b-c1d52f6fc470/leechshares.png?v=1706258924871"
+        alt="Leech Shares"
+      />
+    </div>
+    <br />
+    <!-- Modal content -->
+    <!-- Button to trigger first modal -->
+    <center>
+      <button><a style="color:black;font-size:10px" href="replace_krukis.html">🍪Update</a></button>
+      
+    <button onclick="openModal('modal1')">📜Changelogs</button>
+    <!-- Button to trigger second modal -->
+    <button onclick="openModal('modal2')">ℹ️About</button>
+    <br>
+   
+</center>
+    <!-- The first modal -->
+    <div id="modal1" class="modal">
+      <div class="modal-content" style="overflow: auto">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Changes</h2>
+        <p>
+          <b>Version: <mark>1.1</mark></b> - HTML designing pero pangit yan
+          hshshs
+        </p>
+        <p>
+          <b>Version: <mark>1.0</mark></b> - Initial COmmit para sa maayos na
+          pag aad ng mga members
+        </p>
+      </div>
+    </div>
+<!--ads-->
+ <div id="modal3" class="modal">
+      <div class="modal-content" style="overflow: auto">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+     <div  id="video-container"></div>
+      </div>
+    </div> 
+    <!-- The second modal -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h3>Welcome to 🐙OctoBotv2</h3>
+        <p>
+          OctoBotv2 is the only bot module made by the wierd dev named
+          <mark>Rejard</mark>, this is the build 4 now we used command
+          (<mark>user</mark>)commands at the OctoBotv2 GC
+        </p>
+        <a
+          href="https://www.facebook.com/rejardbentazarofficial"
+          style="
+            color: white;
+            background-color: skyblue;
+            border: 2px solid skyblue;
+            border-radius: 3px;
+          "
+          >Follow</a
+        >
+      </div>
+    </div>
+    <br /><br />
+    <fieldset>
+      <legend>🐙Pinned Post</legend>
+      <div id="fb-root"></div>
+      <div
+        class="fb-post"
+        data-href="https://www.facebook.com/100064164661619/posts/pfbid02DVU1gmr8JH51V1q63hSu2oduYyK3gDX71gnfJ1htjypMKUbRf6tT7TfTCZ3V4Bs9l/"
+      ></div>
+    </fieldset>
+    <br /><br />
+    <fieldset>
+      <legend>🐙OctoBotv2 Users 2024</legend>
+      <div id="uids-container"></div>
+    </fieldset>
+
+    <script>
+      // Fetch and display registered UIDs
+      fetch("/uids")
+        .then((response) => response.json())
+        .then((data) => {
+          const uidsContainer = document.getElementById("uids-container");
+
+          // Check for the 'message' field in the JSON response
+          if (data.message) {
+            const messageElement = document.createElement("p");
+            messageElement.textContent = data.message;
+            uidsContainer.appendChild(messageElement);
+          }
+
+          // Check for the 'uids' field in the JSON response
+          if (data.uids && data.uids.length > 0) {
+            const uidsList = document.createElement("ul");
+            data.uids.forEach((uid) => {
+              const uidItem = document.createElement("li");
+              uidItem.textContent = uid;
+              uidsList.appendChild(uidItem);
+            });
+            uidsContainer.appendChild(uidsList);
+          }
+        })
+        .catch((error) => console.error("Error fetching UIDs:", error));
+      //pormodals
+
+      //twomods
+      // Function to open a modal
+      function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+      }
+
+      // Function to close a modal
+      function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none";
+      }
+
+      // Close modal when clicked outside of it
+      window.onclick = function (event) {
+        var modals = document.getElementsByClassName("modal");
+        for (var i = 0; i < modals.length; i++) {
+          var modal = modals[i];
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      };
+    </script>
+    
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    async function generateVideo() {
+      const apiUrl = "https://your-shoti-api.vercel.app/api/v1/get";
+      const apiKey = "$shoti-1hk46gf5vb1o5qbkgh";
+
+      try {
+        const { data } = await axios.post(apiUrl, { apikey: apiKey });
+
+        if (data.code === 200) {
+          const videoContainer = document.getElementById("video-container");
+          videoContainer.innerHTML = `
+            
+              <h2 class="text-lg font-semibold">${data.data.title}</h2>
+              
+              <p class="text-sm text-gray-500">Ads From: ${data.data.user.username} (${data.data.user.nickname} )</p>
+            
+            <video class="w-full" controls>
+              <source src="${data.data.url}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          `;
+        } else {
+          alert(`Error: ${data.message}`);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        alert("Error fetching data. Please try again later.");
+      }
+    }
+    window.onload = generateVideo();
+    </script><script>
+    function checkPassword() {
+      const password = document.getElementById('passwordInput').value;
+      if (password !== 'rejardgwapodev69') {
+        alert('Incorrect password. Access denied.');
+        
+        document.body.innerHTML = ''; // Clears the page content
+      } else {
+        // Hide the modal if the password is correct
+        document.getElementById('passwordModal').style.display = 'none';
+      }
+    }
+  </script>
+  </body>
+</html>

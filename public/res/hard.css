@@ -1,0 +1,97 @@
+  /* Style for the textarea */
+.custom-textarea {
+  width: 95%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Disable textarea resizing */
+}
+	fieldset {
+	/*margin-top: 50%; */
+	 border: 1px solid green;
+	 border-radius: 5px;
+   /* width: 100%; */
+	 background-color: white;
+	 }
+	 
+	legend {
+	font-size: 20px;
+	color:green;
+	 border: 1.2px solid green;
+	 border-radius: 5px;
+	
+	 background-color: white;
+	 
+	}
+ /*DEFAULT*/
+ button {
+	box-shadow:inset 0px 4px 0px 0px #dcecfb;
+	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+	background-color: black;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-family:Courier New;
+	font-size:12px;
+	font-weight:bold;
+	padding:4px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	box-shadow: 0 2px green; 
+}
+.button:hover {
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	/*background-color:#80b5ea; */
+}
+button:active {
+	position:relative;
+	top:1px;
+	background-color: #3e8e41;
+	  box-shadow: 0 5px green;
+ transform: translateY(1px); 
+}
+button:disabled {
+  background-color: silver;
+  box-shadow: 0 5px red;
+  transform: translateY(2px);
+}
+
+    /* Styling for the modal container */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+           
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+        }
+
+    
+        .modal-content {
+            background-color: white;
+            border-radius: 5px;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid lime;
+            width: 80%; /* 80% of the parent element */
+        }
+
+        /* Close button style */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+       a {
+       text-decoration: none;
+       color: green;
+       font-size: 15px
+       }
